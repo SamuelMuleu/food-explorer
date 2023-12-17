@@ -1,6 +1,6 @@
 import Container from "./style";
 import Polygon from '../../assets/Polygon.svg'
-export function Title({}) {
+export function Title() {
   return (
     <Container>
       <img src={Polygon} alt="Polygon blue"/>
