@@ -1,14 +1,18 @@
 import Container from "./style";
 import { Title } from "../../components/Title";
-import { Input } from "../../components/Input";
+import  LoginForm  from "../../components/LoginForm";
+import CreateAccountLink from "../../components/CreateAccount-Link";
 
 export function SigIn() {
   return (
     <Container>
       <Title />
-      <Input label="email" placeholder="Exemplo:exemplo@exemplo.com.br"/>
+   <LoginForm/>
+<CreateAccountLink/>
     </Container>
     
   
   );
 }
+
+export default SigIn;

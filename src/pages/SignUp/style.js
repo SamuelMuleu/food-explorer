@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { COLORS_THEME } from "../../styles/theme";
 
 const Container = styled.div`
-  font-family:Roboto,'Open Sans', sans-serif;
+
+font-family:Roboto,'Open Sans', sans-serif;
 box-sizing:border-box;  
 
 display:grid;
@@ -11,6 +11,6 @@ padding:32px;
 height: 100vh;
 
 
-
 `;
+
 export default Container;
