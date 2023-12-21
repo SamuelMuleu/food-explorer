@@ -1,6 +1,6 @@
 import Container from "./style";
 
-const Button = () => {
+const Button = ({label}) => {
 
 
 
@@ -10,7 +10,7 @@ return(
     <Container>
 
 
-        <button >Entrar</button>
+        <button>{label}</button>
     </Container>
 )
 

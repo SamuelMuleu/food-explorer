@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { COLORS_THEME } from "../../styles/theme";
+
 
 const Container = styled.a`
 
@@ -8,6 +10,7 @@ border-radius: 4px;
   text-align: center;
   padding: 32px;
   cursor: pointer;
+  padding-top: 12px;
 
 `;
 

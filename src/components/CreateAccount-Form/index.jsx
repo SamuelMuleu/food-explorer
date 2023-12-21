@@ -1,15 +1,22 @@
-import Container from "./style";
+import * as Styles from "./style";
 import Input from "../Input/";
 import Button from "../Button";
+import ReturnToPageLogin from "../../components/ReturnLogin-Link";
 
 const CreateAccount = () => {
   return (
-    <Container>
+    <Styles.Container>
+      <Styles.DesktopHeader>Crie sua Conta</Styles.DesktopHeader>
       <Input label="Seu Nome" placeholder="Exemplo: Samuel Pereira" />
       <Input label="Email" placeholder="Exemplo: exemplo@exemplo.com.br" />
-      <Input label="Senha" placeholder="No minímo 6 caracteres"  type="password" />
-      <Button>Criar Conta</Button>
-    </Container>
+      <Input
+        label="Senha"
+        placeholder="No minímo 6 caracteres"
+        type="password"
+      />
+      <Button label="Criar Conta"/>
+      <ReturnToPageLogin />
+    </Styles.Container>
   );
 };
 

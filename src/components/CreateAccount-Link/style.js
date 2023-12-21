@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
 
-const Container = styled.div`
+const Container = styled.a`
+
 
 
 border-radius: 4px;
@@ -10,6 +11,8 @@ border-radius: 4px;
   text-align: center;
   padding: 32px;
   cursor: pointer;
+
+  
 `;
 
 export default Container;
