@@ -18,6 +18,5 @@ appRoot.render(
       <GlobalStyles />
       <App/>
     </ThemeProvider>
-  </React.StrictMode>,
-
+  </React.StrictMode>
 );
