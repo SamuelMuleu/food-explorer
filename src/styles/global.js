@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { COLORS_THEME } from "./theme";
-import { DEVICE_BREAKPOINTS } from "./deviceBreakpoints";
+import  DEVICE_BREAKPOINTS  from "./deviceBreakpoints";
 
 const GlobalStyles = createGlobalStyle`
 

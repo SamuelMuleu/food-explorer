@@ -1,4 +1,4 @@
-export const DEVICE_BREAKPOINTS = {
+ const DEVICE_BREAKPOINTS = {
 
 
     XS: "320px",
@@ -7,3 +7,4 @@ export const DEVICE_BREAKPOINTS = {
     LG: "1024px",
     XL: "1280px"
 };
+export default DEVICE_BREAKPOINTS;

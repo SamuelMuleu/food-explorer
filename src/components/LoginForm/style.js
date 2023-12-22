@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
+import  DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 import { COLORS_THEME } from "../../styles/theme";
 
 
