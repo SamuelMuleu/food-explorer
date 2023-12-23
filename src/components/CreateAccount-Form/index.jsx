@@ -1,6 +1,6 @@
 import * as Styles from "./style";
 import Input from "../Input/";
-import Button from "../Button";
+import Button from "../ButtonRed";
 import ReturnToPageLogin from "../../components/ReturnLogin-Link";
 
 const CreateAccount = () => {

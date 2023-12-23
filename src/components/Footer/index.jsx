@@ -1,11 +1,10 @@
 import Container from "./style";
-import Title from "../Title";
+import ContentFooter from "../ContentFooter";
 
 const Footer = () => {
   return (
     <Container>
-
-      <Title/>
+   <ContentFooter/>
     </Container>
   );
 };

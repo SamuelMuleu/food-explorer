@@ -16,7 +16,7 @@ align-items: center;
   }
 
   input {
-    margin-top: 8px;
+
     height: 45px;
     width: 316px;
     border-radius: 8px;

@@ -3,13 +3,16 @@ import { COLORS_THEME } from "../../styles/theme";
 
 
 const Container = styled.div`
-margin-top: auto;
-
-width: 428px;
-height: 77px;
-background-color: ${COLORS_THEME.DARK_600} ;
 
 
+  
+    border: none;
+    color: ${COLORS_THEME.LIGHT_100};
+    font-size: 2rem;
+
+
+  cursor: pointer;
+ 
 `;
 
 export default Container;

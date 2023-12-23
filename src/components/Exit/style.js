@@ -19,7 +19,7 @@ padding-bottom: 4px;
 
 
 border-bottom: solid ${COLORS_THEME.DARK_1000} 2px;
-max-width: 372px;
+max-width: 342px;
 
 
 `;

@@ -1,7 +1,7 @@
 import * as Styles from "./style";
 
 import { Input } from "../Input";
-import Button from "../Button";
+import Button from "../ButtonRed";
 import CreateAccountLink from "../../components/CreateAccount-Link";
 
 const LoginForm = () => {
