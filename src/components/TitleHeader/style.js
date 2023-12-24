@@ -3,28 +3,13 @@ import { COLORS_THEME } from "../../styles/theme";
 import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
-height: 100vh;
-display: flex;
-flex-direction: column;
-@media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-    display: none;
+  color: ${COLORS_THEME.LIGHT_100};
+  display: flex;
+  gap: 10px;
+font-size:1.1rem;
+  >img{
+
+width: 24px;
 }
-
-input{
-
-padding-left:30px;
-
-margin-left: 20px;
-margin-top: 138px;
- 
-width: 342px;
- }
-
-
-
-
 `;
-
-
 export default Container;
-

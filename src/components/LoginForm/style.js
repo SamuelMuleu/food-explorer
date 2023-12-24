@@ -8,6 +8,7 @@ const Container = styled.form`
 display: flex;
   flex-direction: column;
   max-width: 316px;
+  max-height: 340px;
   margin: 0 auto;
   gap: 32px;
 

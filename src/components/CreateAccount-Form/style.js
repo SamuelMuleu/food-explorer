@@ -7,28 +7,28 @@ const Container = styled.form`
 display: flex;
   flex-direction: column;
   max-width: 316px;
-  max-height: 400px;
+  max-height: 30rem;
 
   
   gap: 32px;
  
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    height: 450px;
+    height: 440px;
     background-color:${COLORS_THEME.DARK_700} ;
 
      
   border-radius:8px;
 
     padding:80px;
-    margin-top: -80px;
-    margin-bottom: -100px;
+    margin-top: -90px;
+    margin-bottom: -90px;
   box-sizing: content-box;
 
 
 
   }  
-  
+    
 
 
 `;

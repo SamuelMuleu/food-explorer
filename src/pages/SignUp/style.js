@@ -15,10 +15,10 @@ height: 100vh;
 
 
 
-@media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+@media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
   display: grid;
   place-items: center;
-  margin-left: 25rem;
+  margin-left: 17rem;
   
   & > {
     background-color: ${COLORS_THEME.DARK_700};
@@ -29,11 +29,11 @@ height: 100vh;
 
 @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
-  display: flex;
   padding: 0;
   margin: 0;
-margin-left: 90px;
-gap: 70px;
+  display: flex;
+  margin-left: 80px;
+  gap:80px;
 
 }
 

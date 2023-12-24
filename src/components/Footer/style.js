@@ -5,7 +5,7 @@ import { COLORS_THEME } from "../../styles/theme";
 const Container = styled.div`
 margin-top: auto;
 
-width: 428px;
+width: 100vw;
 height: 77px;
 background-color: ${COLORS_THEME.DARK_600} ;
 

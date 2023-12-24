@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import  DEVICE_BREAKPOINTS  from "../../styles/deviceBreakpoints";
+import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 import { COLORS_THEME } from "../../styles/theme";
 
 const Container = styled.div`
@@ -12,10 +12,10 @@ padding:32px;
 
 
 
-@media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+@media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
   display: grid;
   place-items: center;
-  margin-left: 16rem;
+  margin-left: 17rem;
   
   & > {
     background-color: ${COLORS_THEME.DARK_700};
@@ -29,8 +29,8 @@ padding:32px;
   display: flex;
   padding: 0;
   margin: 0;
-margin-left: 90px;
-gap: 70px;
+margin-left: 80px;
+gap: 80px;
 
 }
 
