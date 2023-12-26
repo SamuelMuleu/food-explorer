@@ -13,11 +13,8 @@ const root = document.getElementById('root');
 const appRoot = createRoot(root);
 
 appRoot.render(
-
-  <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <App />
     </ThemeProvider>
-  </React.StrictMode>
 );
