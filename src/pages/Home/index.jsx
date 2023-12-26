@@ -5,11 +5,11 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 const Home = () => {
   
-  const [showComponent, setShowComponente] = useState(false);
+  const [showComponent, setShowComponent] = useState(false);
   
 const handleClick = ()=>{
 
-setShowComponente(!showComponent);
+setShowComponent(showComponent);
 
 
 };
@@ -17,7 +17,10 @@ setShowComponente(!showComponent);
   return (
     <Container>
 <Header>
+  {
+setShowComponent &&
 <Menu onClick={handleClick}/>
+  }
 </Header>
    <Footer/>
     </Container>
