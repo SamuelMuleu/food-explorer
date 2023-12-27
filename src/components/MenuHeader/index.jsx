@@ -2,13 +2,18 @@ import { Container, Menu } from "./style";
 import { X } from "@phosphor-icons/react";
 import Button from "../ButtonX";
 
-const MenuHeader = () => {
+
+
+const MenuAside = ({onCloseMenu}) => {
+
+
+
   return (
-    <Container>
-      <Button icon ={<X/>}/>
-      <Menu>Menu</Menu>
+    <Container >
+      <Button  onCloseMenu={onCloseMenu}icon ={<X/>}/>
+      <Menu  >Menu</Menu>
     </Container>
   );
 };
 
-export default MenuHeader;
+export default MenuAside;

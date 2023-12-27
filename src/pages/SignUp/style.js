@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import  DEVICE_BREAKPOINTS  from "../../styles/deviceBreakpoints";
+import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 import { COLORS_THEME } from "../../styles/theme";
 
 const Container = styled.div`
@@ -9,9 +9,8 @@ box-sizing:border-box;
 
 display:grid;
 place-items: center;
-padding:32px;
+padding:35px;
 height: 100vh;
-
 
 
 
@@ -34,7 +33,7 @@ height: 100vh;
   display: flex;
   margin-left: 80px;
   gap:80px;
-
+  
 }
 
 @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {

@@ -1,13 +1,14 @@
 import Container from "./style";
 
-const ButtonX = ({icon}) => {
+const ButtonX = ({icon,onCloseMenu}) => {
+
 
 
 
 return(
 
 
-    <Container>
+    <Container onClick={onCloseMenu}>
 {icon}
     </Container>
 )

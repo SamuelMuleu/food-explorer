@@ -1,20 +1,21 @@
-import { Container, Menu } from "./style";
+import { Container, ButtonStyle } from "./style";
 import { List, Receipt } from "phosphor-react";
+
 
 import TitleHeader from "../TitleHeader";
 
-const Header = () => {
+const Header = ({onOpenMenu}) => {
   return (
     <Container>
-      <Menu>
+      <ButtonStyle onClick={onOpenMenu}>
         <List style={{marginLeft:'10px'}} />
-        </Menu>
+        </ButtonStyle>
         
         <TitleHeader />
         
-        <Menu >
+        <ButtonStyle >
         <Receipt />
-      </Menu>
+      </ButtonStyle>
     </Container>
   );
 };

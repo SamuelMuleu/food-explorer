@@ -6,6 +6,7 @@ const Container = styled.div`
   color: ${COLORS_THEME.LIGHT_100};
   font-size: 35px;
   display: flex;
+  
 
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -17,14 +18,11 @@ const Container = styled.div`
     }
   }
 
-
-
   gap: 20px;
-  margin: 0 auto;
-  
+
 
   & > img {
-    margin-bottom: 70px;
+
     width: 43px;
     height: 43px;
   }

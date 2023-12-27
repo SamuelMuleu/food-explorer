@@ -1,24 +1,21 @@
-import Container  from "./style";
-import MenuHeader from "../MenuHeader";
+import Container from "./style";
+import MenuAside from "../MenuHeader";
 import Input from "../Input";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import Exit from "../Exit";
-import Footer from "../Footer";
+
+const Menu = ({ menuIsOpen,onCloseMenu}) => {
 
 
-
-
-const Menu = () => {
   return (
-    <Container>
-      <MenuHeader />
+    <Container data-menu-is-open={menuIsOpen}>
+      <MenuAside onCloseMenu={onCloseMenu} />
 
-      <Input svg={<MagnifyingGlass style={{marginLeft:'10px', marginTop:'129px' }}/>} placeholder="Busque Por Pratos ou Ingredientes" />
-  
-    <Exit/>
-    <Footer/>
+      <Input svg={<MagnifyingGlass style={{ marginLeft: '10px', marginTop: '27px' }} />} placeholder="Busque Por Pratos ou Ingredientes" />
+
+      <Exit />
     </Container>
   );
 };
 
-export default  Menu;
+export default Menu;

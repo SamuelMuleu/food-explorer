@@ -12,11 +12,12 @@ height:100px;
 top: 0;
 align-items: center;
 width: 100vw;
+padding: 15px;
 
 
 
 `;
-const Menu = styled.button`
+const ButtonStyle = styled.button`
 background: none;
 border: none;
 
@@ -25,8 +26,8 @@ color: ${COLORS_THEME.LIGHT_100};
 
 @media (min-width: ${DEVICE_BREAKPOINT.MD}) {
     display: none;
+    position: absolute;
 
-    
 };
 
 
@@ -37,4 +38,4 @@ color: ${COLORS_THEME.LIGHT_100};
 
 `;
 
-export { Container, Menu };
+export { Container, ButtonStyle };
