@@ -9,8 +9,8 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 
-
 }
+
 a{
   text-decoration: none;
   color: inherit;
@@ -30,7 +30,7 @@ body{
 
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
   
   background-color: ${(COLORS_THEME.DARK_400)};

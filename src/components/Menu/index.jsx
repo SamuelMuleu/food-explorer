@@ -11,9 +11,10 @@ const Menu = ({ menuIsOpen,onCloseMenu}) => {
     <Container data-menu-is-open={menuIsOpen}>
       <MenuAside onCloseMenu={onCloseMenu} />
 
-      <Input svg={<MagnifyingGlass style={{ marginLeft: '10px', marginTop: '27px' }} />} placeholder="Busque Por Pratos ou Ingredientes" />
+      <Input svg={<MagnifyingGlass/>} placeholder="Busque Por Pratos ou Ingredientes" />
 
       <Exit />
+
     </Container>
   );
 };

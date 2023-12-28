@@ -4,7 +4,7 @@ import { List, Receipt } from "phosphor-react";
 
 import TitleHeader from "../TitleHeader";
 
-const Header = ({onOpenMenu}) => {
+const NavBar = ({onOpenMenu}) => {
   return (
     <Container>
       <ButtonStyle onClick={onOpenMenu}>
@@ -20,4 +20,4 @@ const Header = ({onOpenMenu}) => {
   );
 };
 
-export default Header;
+export default NavBar;

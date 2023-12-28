@@ -10,7 +10,7 @@ const MenuAside = ({onCloseMenu}) => {
 
   return (
     <Container >
-      <Button  onCloseMenu={onCloseMenu}icon ={<X/>}/>
+      <Button onCloseMenu={onCloseMenu}icon ={<X/>}/>
       <Menu  >Menu</Menu>
     </Container>
   );

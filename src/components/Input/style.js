@@ -31,7 +31,6 @@ align-items: center;
 
   }
   .input-container {
-  position: relative;
   margin-left: 8px;
   font-size: 1.6rem;
   margin-bottom: 2px;
@@ -43,6 +42,8 @@ align-items: center;
 color: ${COLORS_THEME.LIGHT_100};
 padding-top: 24px;
 padding-left: 12px;
+margin-top: 18px;
+margin-left: 10px;
 
 }
   

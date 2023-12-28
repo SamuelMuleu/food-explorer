@@ -3,24 +3,31 @@ import { COLORS_THEME } from "../../styles/theme";
 import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
-width: 100vw;
 
-flex-direction: column;
 
+width: 100%;
+  height: 100vh;
+background-color:${COLORS_THEME.DARK_500} ;
+  flex-direction: column;
+  display: none;
+
+
+
+
+
+
+
+@media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
 display: none;
 
-
+position:absolute ;
+z-index: 1;
 &[data-menu-is-open="true"]{
-display: block;
+    display: block;
 
 }
 
 
-
-
-
-@media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
-display: none;
 }
 
 input{
@@ -28,7 +35,7 @@ input{
 padding-left:30px;
 
 margin-left: 20px;
-margin-top: 36px;
+margin-top:26px;
  
 width: 342px;
  }

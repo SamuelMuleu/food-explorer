@@ -9,9 +9,10 @@ display: flex;
 gap: 0.5rem;
 background-color: ${COLORS_THEME.DARK_700};
 height:100px ;
-top: 0;
-position: fixed;
 width: 100%;
+
+
+
 
 padding: 58px 0 22px 24px;
 

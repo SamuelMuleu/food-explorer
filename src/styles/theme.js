@@ -3,7 +3,7 @@ const theme = {
   DARK_900: "#0D1D25"
 
 }
-;
+  ;
 const COLORS_THEME = {
   LIGHT_100: "#FFFFFF",
   LIGHT_200: "#FFFAF1",
@@ -23,6 +23,7 @@ const COLORS_THEME = {
   DARK_800: "#0D161B",
   DARK_900: "#0D1D25",
   DARK_1000: "#192227",
+  GRADIENT_200: "091E26",
 
   TOMATO_100: "#750310",
   TOMATO_200: "#92000E",
@@ -37,4 +38,4 @@ const COLORS_THEME = {
   CAKE_200: "#065E7C",
 };
 
-export { COLORS_THEME,theme };
+export { COLORS_THEME, theme };
