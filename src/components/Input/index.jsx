@@ -3,10 +3,10 @@ import  Container from "./style";
 
 
 
-export function Input({label,placeholder,svg}){
+export function Input({label,svg,placeholder}){
 
 return(
-  <Container>    
+  <Container >    
 
 
   

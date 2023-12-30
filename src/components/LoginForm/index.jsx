@@ -16,7 +16,7 @@ const LoginForm = () => {
         placeholder="No minímo 6 caracteres"
         type="password"
       />
-      <Button type="submit" label="Entrar" />
+      <Button type="submit" placeholder="Entrar" />
 
       <CreateAccountLink />
     </Styles.Container>

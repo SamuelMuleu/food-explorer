@@ -16,6 +16,8 @@ padding: 15px;
 
 
 
+
+
 `;
 const ButtonStyle = styled.button`
 background: none;
@@ -27,6 +29,7 @@ color: ${COLORS_THEME.LIGHT_100};
 @media (min-width: ${DEVICE_BREAKPOINT.MD}) {
     display: none;
     position: absolute;
+    
 
 };
 
@@ -37,5 +40,61 @@ color: ${COLORS_THEME.LIGHT_100};
 
 
 `;
+const ContainerInput = styled.div`
 
-export { Container, ButtonStyle };
+
+padding-right: 100px;
+
+input{
+    width: 580px;
+    height: 40px;
+    border-radius: 0%;
+}
+
+::placeholder{
+text-align: center;
+
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+
+
+   
+    padding-left: 140px;
+    
+    
+    
+}
+
+@media (max-width:${DEVICE_BREAKPOINT.LG}) {
+display: none;
+
+
+}
+
+`;
+const ReceiptButton = styled.div`
+
+
+
+
+border-radius: 6px;
+
+
+svg{
+    width: 23px;
+    height: 22px;
+
+}
+
+@media (max-width:${DEVICE_BREAKPOINT.LG}) {
+display: none;
+
+
+}
+
+`;
+
+export { Container, ButtonStyle, ContainerInput,ReceiptButton };

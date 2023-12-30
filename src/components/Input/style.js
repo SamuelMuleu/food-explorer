@@ -33,16 +33,16 @@ align-items: center;
   .input-container {
   margin-left: 8px;
   font-size: 1.6rem;
-  margin-bottom: 2px;
+  margin-bottom: 1.3px;
 
 }
 
 .svg-container {
-  position: absolute;
+  position:absolute;
 color: ${COLORS_THEME.LIGHT_100};
-padding-top: 24px;
+padding-top: 28px;
 padding-left: 12px;
-margin-top: 18px;
+margin-top: 14px;
 margin-left: 10px;
 
 }

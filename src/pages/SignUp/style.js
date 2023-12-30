@@ -12,29 +12,21 @@ place-items: center;
 padding:35px;
 height: 100vh;
 
-
-
-@media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-  display: grid;
-  place-items: center;
-  margin-left: 17rem;
-  
-  & > {
-    background-color: ${COLORS_THEME.DARK_700};
-  }
-
-}
-
-
 @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
   padding: 0;
   margin: 0;
   display: flex;
   margin-left: 80px;
-  gap:80px;
+  gap: 200px;
   
-}
+};
+
+  
+  & > {
+    background-color: ${COLORS_THEME.DARK_700};
+  };
+
 
 @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
 

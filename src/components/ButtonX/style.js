@@ -9,9 +9,10 @@ const Container = styled.button`
     color: ${COLORS_THEME.LIGHT_100};
     background-color: inherit;
     font-size: 2rem;
-
+  
 
   cursor: pointer;
+
  
 `;
 

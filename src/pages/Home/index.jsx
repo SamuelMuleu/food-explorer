@@ -3,44 +3,38 @@ import Menu from "../../components/Menu";
 import NavBar from "../../components/NavBar";
 import RectangleMacaron from "../../components/RectangleMacaron";
 import Footer from "../../components/Footer";
-import CarouselComponent from "../../components/CarouselComponent";
+import { CarouselComponent } from "../../components/CarouselComponent";
 
 import { useState } from "react";
 
 const Home = () => {
+  const dishes = [
+    {
+      name: "Prato 1",
+      description: "Descrição do Prato 1",
+      image: "/image1.png",
+    },
+  ];
 
-const dishes = [
-  { name: 'Prato 1', description: 'Descrição do Prato 1', image: '../../../public/image1.png' },
+  const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
-];
-
-
-const [MenuIsOpen,setMenuIsOpen] = useState(false); 
-
-const handleOpenMenu = ()=>{
-
-setMenuIsOpen(true);
-
-}
-const handleCloseMenu = ()=>{
-
-
-  setMenuIsOpen(false);
-
-}
+  const handleOpenMenu = () => {
+    setMenuIsOpen(true);
+  };
+  const handleCloseMenu = () => {
+    setMenuIsOpen(false);
+  };
   return (
     <Container>
       <NavBar onOpenMenu={handleOpenMenu} />
 
- <Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
+      <Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
 
-
-<RectangleMacaron/>
-<CarouselComponent dishes={dishes}/>
+      <RectangleMacaron />
+      <CarouselComponent dishes={dishes} />
       <Footer />
     </Container>
   );
 };
 
 export default Home;
-  

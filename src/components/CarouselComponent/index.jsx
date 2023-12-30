@@ -1,37 +1,35 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 import Button from "../ButtonRed";
 import Container from "./styles";
 
-
-
-const CarouselComponent = ({ dishes }) => {
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 100,
-  slidesToShow: 2, 
-  slidesToScroll: 1,
-};
-
+const CarouselComponent = () => {
+  <Swiper
+  modules={[Navigation, Pagination, Scrollbar, A11y]}
+  spaceBetween={50}
+  slidesPerView={3}
+  navigation
+  pagination={{ clickable: true }}
+  scrollbar={{ draggable: true }}
+  onSwiper={(swiper) => console.log(swiper)}
+  onSlideChange={() => console.log('slide change')}
+  >
+    <SwiperSlide> Slide 1 </SwiperSlide>
+    <SwiperSlide> Slide 2</SwiperSlide>
+    <SwiperSlide>Slide 3</SwiperSlide>
+  </Swiper>;
   return (
     <Container>
-
-
-    <Slider {...settings}>
-      {dishes.map((dish,index) => (
-        <div key={index}>
-          <img src={dish.image}></img>
-          <h3>{dish.description}</h3>
-          <Button />
-        </div>
-    ))}
-    </Slider>
-
+      <Button placeholder="Incluir" />
     </Container>
   );
 };
 
-export default CarouselComponent;
+export { CarouselComponent };

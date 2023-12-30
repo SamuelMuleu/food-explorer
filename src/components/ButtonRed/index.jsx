@@ -1,6 +1,6 @@
 import Container from "./style";
 
-const Button = ({label}) => {
+const Button = ({svg,placeholder}) => {
 
 
 
@@ -10,7 +10,7 @@ return(
     <Container>
 
 
-        <button>{label}</button>
+        <button >{svg} {placeholder}</button>
     </Container>
 )
 
