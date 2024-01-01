@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CreateAccount = () => {
   return (
     <Container>
-      <Link to="/Signup">
+      <Link to="/food-explorer/signup">
         Criar uma Conta
       </Link>
     </Container>
