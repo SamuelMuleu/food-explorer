@@ -2,14 +2,19 @@ import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
 
 
-const Container = styled.div`
+const Container = styled.button`
 
-button{
+
+span {
+    margin-left: 5px;
+
+  }
+
 
     background: linear-gradient(${COLORS_THEME.TOMATO_100}, ${COLORS_THEME.TOMATO_100});
     border: none;
     color: white;
-}
+
 
   cursor: pointer;
   font-family:Roboto,'Open Sans', sans-serif;

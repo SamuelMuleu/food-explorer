@@ -8,11 +8,11 @@ const Container = styled.header`
 display: flex ;
 justify-content: space-between;
 background-color: ${COLORS_THEME.DARK_700};
-height:100px;
+height: 10px;
 top: 0;
 align-items: center;
 width: 100vw;
-padding: 15px;
+padding: 40px;
 
 
 
@@ -43,7 +43,7 @@ color: ${COLORS_THEME.LIGHT_100};
 const ContainerInput = styled.div`
 
 
-padding-right: 100px;
+
 
 input{
     width: 580px;
@@ -53,6 +53,7 @@ input{
 
 ::placeholder{
 text-align: center;
+
 
 }
 
@@ -79,14 +80,20 @@ const ReceiptButton = styled.div`
 
 
 
-
 border-radius: 6px;
+width:220px;
+
 
 
 svg{
     width: 23px;
     height: 22px;
+    vertical-align:top;
 
+}
+span{
+
+    vertical-align:bottom;
 }
 
 @media (max-width:${DEVICE_BREAKPOINT.LG}) {
@@ -97,4 +104,4 @@ display: none;
 
 `;
 
-export { Container, ButtonStyle, ContainerInput,ReceiptButton };
+export { Container, ButtonStyle, ContainerInput, ReceiptButton };

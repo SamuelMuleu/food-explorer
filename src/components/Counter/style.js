@@ -3,11 +3,12 @@ import { COLORS_THEME } from "../../styles/theme";
 
 
 const Container = styled.div`
-margin-top: auto;
 
-width: 100%;
-height: 77px;
-background-color: ${COLORS_THEME.DARK_600} ;
+>button{
+    border: none;
+background-color: inherit;
+color: ${COLORS_THEME.LIGHT_100};
+}
 
 
 `;

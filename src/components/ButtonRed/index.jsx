@@ -1,20 +1,14 @@
 import Container from "./style";
 
-const Button = ({svg,placeholder}) => {
+const Button = ({ svg, content }) => {
+  
+  return(
 
-
-
-return(
-
-
-    <Container>
-
-
-        <button >{svg} {placeholder}</button>
+   <Container>
+    {svg}
+    <span>{content}</span>
     </Container>
-)
-
-
+    );
 };
 
 export default Button;

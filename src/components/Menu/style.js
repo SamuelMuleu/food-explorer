@@ -21,9 +21,11 @@ background-color:${COLORS_THEME.DARK_500} ;
 display: none;
 
 position:absolute ;
-z-index: 1;
+z-index: 2;
+
 &[data-menu-is-open="true"]{
     display: block;
+
 
 }
 

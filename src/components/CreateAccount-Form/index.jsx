@@ -14,7 +14,7 @@ const CreateAccount = () => {
         placeholder="No minímo 6 caracteres"
         type="password"
       />
-      <Button placeholder="Criar Conta"/>
+      <Button content="Criar Conta"/>
       <ReturnToPageLogin />
     </Styles.Container>
   );

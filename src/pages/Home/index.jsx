@@ -3,18 +3,13 @@ import Menu from "../../components/Menu";
 import NavBar from "../../components/NavBar";
 import RectangleMacaron from "../../components/RectangleMacaron";
 import Footer from "../../components/Footer";
-import { CarouselComponent } from "../../components/CarouselComponent";
+import  CarouselComponent  from "../../components/CarouselComponent";
 
 import { useState } from "react";
 
 const Home = () => {
-  const dishes = [
-    {
-      name: "Prato 1",
-      description: "Descrição do Prato 1",
-      image: "/image1.png",
-    },
-  ];
+ 
+
 
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -31,7 +26,7 @@ const Home = () => {
       <Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
 
       <RectangleMacaron />
-      <CarouselComponent dishes={dishes} />
+<CarouselComponent/>
       <Footer />
     </Container>
   );
