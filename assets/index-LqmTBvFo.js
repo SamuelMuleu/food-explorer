@@ -678,7 +678,7 @@ clip-path: polygon(0% 0 , 100% 0, 100% 80%,0% 81% );
 }
 
 }
-`,pS="/assets/macaron-oRvv8bPb.png",mS=()=>R.jsxs(fS,{children:[R.jsx("img",{src:pS,alt:"macaron colorful"}),R.jsxs("div",{children:[R.jsx("h2",{children:"Sabores inigualáveis"}),R.jsx("p",{children:"Sinta o cuidado do preparo com ingredientes selecionados."})]})]}),hS=K.div`
+`,pS="/food-explorer/assets/macaron-oRvv8bPb.png",mS=()=>R.jsxs(fS,{children:[R.jsx("img",{src:pS,alt:"macaron colorful"}),R.jsxs("div",{children:[R.jsx("h2",{children:"Sabores inigualáveis"}),R.jsx("p",{children:"Sinta o cuidado do preparo com ingredientes selecionados."})]})]}),hS=K.div`
 margin-top: auto;
 
 width: 100vw;
