@@ -20,9 +20,12 @@ const Counter = () => {
 
   return (
     <Container>
+      <div>
       <button onClick={decrement}><Minus/></button>
       {counter}
       <button onClick={increment}><Plus/></button>
+
+      </div>
     </Container>
   );
 };

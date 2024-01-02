@@ -1,5 +1,5 @@
-import Container from "./style";
-import { Heart } from "@phosphor-icons/react";
+import {Container,ButtonStyle} from "./style";
+import { Heart,CaretRight } from "@phosphor-icons/react";
 import Counter from "../Counter";
 import Button from "../ButtonRed";
 
@@ -57,13 +57,16 @@ const CardCarousel = () => {
     <Container>
       {data.map((item) => (
         <div key={item.id}>
-            <button><Heart /></button>
+          <button className="heartButton"><Heart /></button>
           <img src={item.image} alt={item.title} />
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <p>R${item.value}</p>
-          <Counter/>
-          <Button content="Incluir"/>
+          <h1>{item.title} <CaretRight size={12}/> </h1>
+
+          <p>R$ {item.value}</p>
+          <Counter className="counter"/>
+<ButtonStyle>
+
+          <Button  content="Incluir"/>
+</ButtonStyle>
         </div>
       ))}
     </Container>

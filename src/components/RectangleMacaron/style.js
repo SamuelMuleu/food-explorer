@@ -8,7 +8,8 @@ display: flex;
 width: 370px;
 height: 100px;
 border-radius: 6px;
-margin: 9px;
+margin: 12px;
+
 
 margin-top: 40px;
 
@@ -31,7 +32,8 @@ background:linear-gradient(180deg, #091E26 0%, #00131C 100%);
     padding-top: 20px;
     font-weight: 400;
     color: ${COLORS_THEME.LIGHT_300};
-    margin-left: 22px;
+    margin-left: 20px;
+  
     padding-bottom: 20px;
     gap: 5px;
   }
@@ -46,7 +48,7 @@ background:linear-gradient(180deg, #091E26 0%, #00131C 100%);
   
   width: 1090px;
   height: 260px;
-margin-left: 140px;
+margin-left: 100px;
 justify-content:flex-start;
 margin-top: 82px;
   > img {
