@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar";
 import RectangleMacaron from "../../components/RectangleMacaron";
 import Footer from "../../components/Footer";
 import  CarouselComponent  from "../../components/CarouselComponent";
-
+import CardCarousel from "../../components/CardCarousel";
 
 import { useState } from "react";
 

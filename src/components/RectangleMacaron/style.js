@@ -5,7 +5,8 @@ import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
 display: flex;
-width: 370px;
+width: 350px;
+
 height: 100px;
 border-radius: 6px;
 margin: 12px;

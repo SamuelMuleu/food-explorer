@@ -21,6 +21,7 @@ padding: 20px;
 position: relative;
 
 
+
 .heartButton{
    position: absolute;
 
@@ -29,7 +30,7 @@ position: relative;
    color: ${COLORS_THEME.LIGHT_100};
    border-radius: 50%;
    top: 0%;
-   left: 150px;
+   left: 180px;
    
 >svg{
 
@@ -41,7 +42,7 @@ position: relative;
 
 height:88px;
 width: 88px;
-margin-left: 20px;
+margin-left: 35px;
 
 }
 >h1{
@@ -62,6 +63,7 @@ white-space: nowrap;
 color: ${COLORS_THEME.CAKE_100};
 padding:8px;
 text-align: center;
+font-weight: 500;
 }
 
 }
@@ -74,6 +76,7 @@ justify-content: center;
 >button{
     width: 162px;
 height: 30px;
+padding: 3px;
 }
 
 `;

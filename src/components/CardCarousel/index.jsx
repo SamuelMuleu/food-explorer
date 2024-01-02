@@ -3,6 +3,9 @@ import { Heart,CaretRight } from "@phosphor-icons/react";
 import Counter from "../Counter";
 import Button from "../ButtonRed";
 
+
+
+
 const CardCarousel = () => {
   const data = [
     {
@@ -53,7 +56,10 @@ const CardCarousel = () => {
     },
   ];
 
+
+
   return (
+
     <Container>
       {data.map((item) => (
         <div key={item.id}>
@@ -70,6 +76,8 @@ const CardCarousel = () => {
         </div>
       ))}
     </Container>
+
+
   );
 };
 
