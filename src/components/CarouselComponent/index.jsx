@@ -1,49 +1,36 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Virtual } from "swiper/modules";
 
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/virtual";
+import React from 'react';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react'; 
 
 import CardCarousel from "../../components/CardCarousel";
-import Container from "./styles";
 
 const CarouselComponent = () => {
-  
-  const slides = Array.from({ length: 8}).map(
-    (index) => `Slide ${index + 2}`
+  const [sliderRef, sliderInstance] = useKeenSlider({
+
+    mode:'free',
+    slides:origin|'center'|2,
+
+    slideChanged() {
+
+    },
+  });
+
+  const slides = Array.from({ length: 8 }).map(
+    (index) => `Slide ${index + 1}`
   );
+
+
 
   return (
-
-
-<Container>
-
-    <Swiper
-      modules={[Navigation, Pagination, A11y, Virtual]}
-      slidesPerView={2}
-      virtual
-      spaceBetween={1000}
-      navigation={true}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-    >
-      {slides.map((item) => (
-    
-        <SwiperSlide key={item.id} >
-        <CardCarousel item={item}/>
-        </SwiperSlide>
-      
+    <div ref={sliderRef} className="keen-slider">
+      {slides.map((item, index) => (
+        <div key={index} className="keen-slider__slide">
+          <CardCarousel item={item} />
+        </div>
       ))}
-    </Swiper>
-</Container>
-
-
+    </div>
   );
-
 };
 
 export default CarouselComponent;

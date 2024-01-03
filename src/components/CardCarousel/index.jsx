@@ -78,7 +78,6 @@ const CardCarousel = () => {
 
 );
 
-console.log(item);
 };
 
 export default CardCarousel;
