@@ -20,10 +20,10 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<SignIn />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route  path="/home" element={<Home/>}/>
+      <Route path="/food-explorer" element={<SignIn />} />
+        <Route path="/food-explorer/signin" element={<SignIn />} />
+        <Route path="/food-explorer/signup" element={<SignUp />} />
+        <Route  path="/food-explorer/home" element={<Home/>}/>
  
       </Routes>
     </Router>

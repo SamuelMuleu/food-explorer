@@ -31,9 +31,9 @@ const CarouselComponent = () => {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
     >
-      {slides.map((index,item) => (
+      {slides.map((item) => (
     
-        <SwiperSlide key={index} >
+        <SwiperSlide key={item.id} >
         <CardCarousel item={item}/>
         </SwiperSlide>
       
