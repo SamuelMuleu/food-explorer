@@ -6,7 +6,7 @@ const Container = styled.form`
 
 display: flex;
   flex-direction: column;
-  max-width: 316px;
+  max-width: 300px;
   max-height: 30rem;
 
   

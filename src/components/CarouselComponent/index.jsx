@@ -1,35 +1,43 @@
-
-import React from 'react';
-import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react'; 
+import React from "react";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import Container from "./styles";
 
 import CardCarousel from "../../components/CardCarousel";
 
-const CarouselComponent = () => {
-  const [sliderRef, sliderInstance] = useKeenSlider({
+const CarouselComponent = ({dataArray}) => {
 
-    mode:'free',
-    slides:origin|'center'|2,
 
-    slideChanged() {
-
+  const [sliderRef] = useKeenSlider({
+    slides: {
+spacing:-130,
+      origin: 'auto',
     },
+    
+
+    range: `align`,
+    loop: true,
+    mode: 'center',
+
+
+    slideChanged() {},
   });
-
-  const slides = Array.from({ length: 8 }).map(
-    (index) => `Slide ${index + 1}`
-  );
-
-
-
+  
+  
+  
+  
   return (
-    <div ref={sliderRef} className="keen-slider">
-      {slides.map((item, index) => (
-        <div key={index} className="keen-slider__slide">
-          <CardCarousel item={item} />
+    <Container >
+
+   <div ref={sliderRef}  className="keen-slider" >
+      {dataArray.map(( item ) => (
+        <div key={item}  className="keen-slider__slide" >
+          <CardCarousel item={item}/>
+   
         </div>
       ))}
     </div>
+    </Container>
   );
 };
 

@@ -4,10 +4,9 @@ import { COLORS_THEME } from "../../styles/theme";
 const Container = styled.div`
 
 display: flex;
-padding: 20px;
-gap: 16px;
-height: 292px;
-width: 210px;
+
+
+padding-top: 42px;
 color:${COLORS_THEME.LIGHT_100} ;
 align-items: center;
 
@@ -75,7 +74,6 @@ display: flex;
 justify-content: center;
 >button{
     width: 162px;
-height: 30px;
 padding: 3px;
 }
 

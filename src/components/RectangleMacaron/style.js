@@ -9,7 +9,7 @@ width: 350px;
 
 height: 100px;
 border-radius: 6px;
-margin: 12px;
+margin: 18px;
 
 
 margin-top: 40px;
@@ -53,12 +53,16 @@ margin-left: 100px;
 justify-content:flex-start;
 margin-top: 82px;
   > img {
+
+
+    left: 0%;
     padding-top: 30px;
-width: 580px;
+    padding-right: 20px;
+width: 500px;
 height: 406px;
 opacity: 0.8;
 
-clip-path: polygon(0% 0 , 100% 0, 100% 80%,0% 81% ); 
+clip-path: polygon(0% 0 , 100% 0, 100% 83%,0% 81% ); 
 }
 >div{
 
