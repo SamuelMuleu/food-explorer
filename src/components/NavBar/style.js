@@ -6,7 +6,8 @@ const Container = styled.header`
 
 
 display: flex ;
-justify-content: space-between;
+justify-content: space-evenly;
+gap: 50px;
 background-color: ${COLORS_THEME.DARK_700};
 height: 10px;
 top: 0;
@@ -103,5 +104,6 @@ display: none;
 }
 
 `;
+
 
 export { Container, ButtonStyle, ContainerInput, ReceiptButton };

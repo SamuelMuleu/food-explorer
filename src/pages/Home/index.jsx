@@ -11,6 +11,9 @@ import {data} from "../../utils/data";
 import { useState } from "react";
 
 const Home = () => {
+
+
+
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
   const handleOpenMenu = () => {
@@ -30,15 +33,15 @@ const Home = () => {
 
       <div className="div-carousel">
         Refeições
-        <CarouselComponent  dataArray={data} />
+        <CarouselComponent  dataArray={data}   />
       </div>
       <div className="div-carousel">
         Pratos principais
-        <CarouselComponent dataArray={data}/>
+        <CarouselComponent dataArray={data}  />
       </div>
       <div className="div-carousel">
         Bebidas principais
-        <CarouselComponent  dataArray={dataJuice}/>
+        <CarouselComponent  dataArray={dataJuice} />
       </div>
       <Footer />
     </Container>

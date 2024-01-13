@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
+import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
 
 display: flex;
 
+@media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+        
+    display: flex;
+justify-content: center;
+}
 
 padding-top: 42px;
 color:${COLORS_THEME.LIGHT_100} ;
 align-items: center;
+
 
 
 
@@ -21,6 +28,7 @@ position: relative;
 
 
 
+
 .heartButton{
    position: absolute;
 
@@ -29,7 +37,8 @@ position: relative;
    color: ${COLORS_THEME.LIGHT_100};
    border-radius: 50%;
    top: 0%;
-   left: 180px;
+   left: 150px;
+
    
 >svg{
 
@@ -41,7 +50,7 @@ position: relative;
 
 height:88px;
 width: 88px;
-margin-left: 35px;
+margin-left: 30px;
 
 }
 >h1{
@@ -72,10 +81,6 @@ const ButtonStyle = styled.div`
 
 display: flex;
 justify-content: center;
->button{
-    width: 162px;
-padding: 3px;
-}
 
 `;
 

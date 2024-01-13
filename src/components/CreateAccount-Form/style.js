@@ -11,6 +11,11 @@ display: flex;
 
   
   gap: 32px;
+  
+  & button{
+
+    width: 320px;
+  }
  
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {

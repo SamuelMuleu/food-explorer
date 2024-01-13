@@ -7,7 +7,7 @@ const Container = styled.div`
 >div{
      display: flex;
      justify-content: center;
-     gap:10px;
+     gap:15px;
      padding-bottom: 8px;
      padding-top: 8px;
     >button{

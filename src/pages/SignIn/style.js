@@ -8,10 +8,9 @@ box-sizing:border-box;
 
 display:grid;
 place-items: center;
-padding:32px;
 row-gap: 70px;
 
-
+padding: 20px;
 @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
   display: flex;

@@ -1,7 +1,7 @@
 import { Container, ButtonStyle, ContainerInput, ReceiptButton } from "./style";
 import { List, Receipt, MagnifyingGlass } from "phosphor-react";
 
-import TitleHeader from "../TitleHeader";
+import Title from "../Title";
 import Input from "../Input";
 import Button from "../ButtonRed";
 import ButtonSignout from "../ButtonSignout";
@@ -9,11 +9,13 @@ import ButtonSignout from "../ButtonSignout";
 const NavBar = ({ onOpenMenu }) => {
   return (
     <Container>
-      <ButtonStyle onClick={onOpenMenu}>
-        <List style={{ marginLeft: "10px" }} />
+      <ButtonStyle >
+        <List onClick={onOpenMenu} style={{ marginLeft: "10px" }} />
       </ButtonStyle>
 
-      <TitleHeader />
+
+      <Title/>
+
 
       <ContainerInput>
         <Input

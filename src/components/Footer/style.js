@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
 
 
-const Container = styled.div`
+const Container = styled.footer`
 margin-top: auto;
-
-width: 100vw;
-height: 77px;
+max-width: 100vw;
+height: 70px;
 background-color: ${COLORS_THEME.DARK_600} ;
 
 

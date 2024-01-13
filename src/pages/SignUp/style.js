@@ -9,9 +9,9 @@ box-sizing:border-box;
 
 display:grid;
 place-items: center;
-padding:35px;
 height: 100vh;
 
+padding: 20px;
 @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
   padding: 0;

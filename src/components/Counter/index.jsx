@@ -6,8 +6,10 @@ import { Plus, Minus } from "@phosphor-icons/react";
 const Counter = () => {
   const [counter, setCounter] = useState(0);
 
-  const increment = () => {
+  const increment = () => { 
+    
     setCounter(counter + 1);
+
   };
 
   const decrement = () => {
@@ -21,7 +23,7 @@ const Counter = () => {
   return (
     <Container>
       <div>
-      <button onClick={decrement}><Minus/></button>
+      <button  onClick={decrement}><Minus/></button>
       {counter}
       <button onClick={increment}><Plus/></button>
 

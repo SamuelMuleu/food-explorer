@@ -15,10 +15,14 @@ flex-direction: column;
     max-width: 100%;
     width: 1350px;
     
+    
 @media (max-width:${DEVICE_BREAKPOINTS.MD}){
 
     max-width:400px;
- 
+    position: relative;
+
+
+
 }
 
 
@@ -31,7 +35,14 @@ padding: 20px 5px 35px 30px ;
 };
 ;
 
+footer{
 
+p{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+}
 `;
 
 export default Container;

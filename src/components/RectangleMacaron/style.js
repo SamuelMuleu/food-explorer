@@ -47,7 +47,7 @@ background:linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
 @media (min-width:${DEVICE_BREAKPOINTS.LG}){
   
-  width: 1090px;
+  width: 1040px;
   height: 260px;
 margin-left: 100px;
 justify-content:flex-start;
