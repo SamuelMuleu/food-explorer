@@ -29,7 +29,7 @@ span {
   text-align: center;
 
   &:hover {
-    background: linear-gradient(${COLORS_THEME.TOMATO_200}, ${COLORS_THEME.TOMATO_200});
+    background: linear-gradient(${COLORS_THEME.TOMATO_400}, ${COLORS_THEME.TOMATO_400});
    
   }
 

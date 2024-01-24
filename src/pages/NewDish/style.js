@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
-import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 
 const Container = styled.div`
-
-position: absolute;
-
-top: 0%;
-min-height: 100%;
 min-width: 100vw;
+min-height: 100vh;
 
 
 `;

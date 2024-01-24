@@ -4,34 +4,24 @@ import "keen-slider/keen-slider.min.css";
 import CardCarousel from "../CardCarousel";
 import Container from "./styles";
 
-
-
-const CarouselComponent = ({dataArray}) => {
-
-  
-
-
-
+const CarouselComponent = ({ dataArray }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
-      spacing: -130,
-      origin: "auto",
+      spacing: -110,
     },
 
     range: 2,
     loop: true,
     mode: "auto",
-      breakpoints: {
+    breakpoints: {
       "(min-width:1090px)": {
         slides: {
-          spacing: -1100,    
-
+          spacing: -1050,
         },
       },
     },
-
 
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -41,35 +31,34 @@ const CarouselComponent = ({dataArray}) => {
     },
   });
 
-  
-
   const handleOpacity = (index) => {
     const distance = Math.abs(currentSlide - index);
-    const maxDistance = 7;
+    const maxDistance = 10;
     const opacity = 0.8 - Math.min(distance, maxDistance) / maxDistance;
     return opacity;
   };
-
 
   return (
     <Container>
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           {dataArray.map((item) => (
-            <div key={item.id}  className="keen-slider__slide" style={{ opacity: handleOpacity(item.id) }}>
-              
+            <div
+              key={item.id}
+              className="keen-slider__slide"
+              style={{ opacity: handleOpacity(item.id) }}
+            >
               <CardCarousel item={item} />
             </div>
           ))}
         </div>
-
       </div>
       {loaded && instanceRef.current && (
         <>
-          <Arrow  className="arrow"
+          <Arrow
+            className="arrow"
             left
             onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()}
-       
           />
 
           <Arrow
@@ -81,25 +70,24 @@ const CarouselComponent = ({dataArray}) => {
           />
         </>
       )}
-
     </Container>
   );
 };
 
 function Arrow(props) {
-
   const disabled = props.disabled ? " arrow--disabled" : "";
   return (
-    <svg 
+    <svg
       onClick={props.onClick}
       className={`arrow ${
         props.left ? "arrow--left" : "arrow--right"
       } ${disabled}`}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24" fill="#ffff" cursor="pointer" fillOpacity='0.2' 
-    
-      > 
-
+      viewBox="0 0 24 24"
+      fill="#ffff"
+      cursor="pointer"
+      fillOpacity="0.2"
+    >
       {props.left && (
         <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
       )}
@@ -108,6 +96,5 @@ function Arrow(props) {
       )}
     </svg>
   );
-  
 }
 export default CarouselComponent;

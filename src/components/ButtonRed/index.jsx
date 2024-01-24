@@ -1,12 +1,13 @@
 import Container from "./style";
 
-const Button = ({ svg, content,onClick }) => {
+const Button = ({ svg, content,onClick,isnew}) => {
   
   return(
 
-   <Container onClick={onClick}>
+   <Container onClick={onClick} isnew={isnew} >
     {svg}
     <span>{content}</span>
+    
     </Container>
     );
 };

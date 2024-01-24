@@ -3,9 +3,12 @@ import { COLORS_THEME } from "../../styles/theme";
 
 
 const Container = styled.footer`
-margin-top: auto;
-max-width: 100vw;
-height: 70px;
+padding: 10px;
+margin: -10px;
+
+bottom: 10%;
+min-width: 100%;
+max-height: 70px;
 background-color: ${COLORS_THEME.DARK_600} ;
 
 

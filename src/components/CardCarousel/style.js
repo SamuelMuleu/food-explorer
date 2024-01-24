@@ -6,17 +6,51 @@ const Container = styled.div`
 
 display: flex;
 
+.pencilButton{
+
+
+
+   background: none;
+
+border: none;
+   color: ${COLORS_THEME.LIGHT_100};
+   border-radius: 50%;
+   display: flex;
+   position: absolute;
+   top: 19%;
+   right: 27%;
+
+>svg{
+
+    font-size: 20px;
+}
+
+}
 @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
         
     display: flex;
 justify-content: center;
+}
+@media (min-width:${DEVICE_BREAKPOINTS.LG}) {
+.pencilButton{
+position: relative;
+
+right: 0%;
+left: 90%;
+
+   background: none;
+
+   color: ${COLORS_THEME.LIGHT_100};
+   border-radius: 50%;
+
+}
 }
 
 padding-top: 42px;
 color:${COLORS_THEME.LIGHT_100} ;
 align-items: center;
 
-
+position: relative;
 
 
 >div{
@@ -24,28 +58,27 @@ border: 3px solid ${COLORS_THEME.DARK_300};
 background-color: ${COLORS_THEME.DARK_200};
 border-radius: 10px;
 padding: 20px;
-position: relative;
+
 
 
 
 
 .heartButton{
-   position: absolute;
-
+position: absolute;
    background: inherit;
    border: none;
    color: ${COLORS_THEME.LIGHT_100};
    border-radius: 50%;
-   top: 0%;
-   left: 150px;
+ left: 15%;
+ top: 19%;
 
-   
 >svg{
 
     font-size: 20px;
 }
 
 }
+
 >img{
 
 height:88px;
@@ -75,6 +108,7 @@ font-weight: 500;
 }
 
 }
+
 
 `;
 const ButtonStyle = styled.div`

@@ -8,18 +8,20 @@ const LoginForm = () => {
 
 
   return (
-    <Styles.Container>
-      <Styles.DesktopHeader> Faça Login</Styles.DesktopHeader>
-      <Input label="Email" placeholder="Exemplo:exemplo@exemplo.com.br" />
+    <form >
+     <Styles.Container>
+      <Input label="Email" placeholder="Exemplo:exemplo@exemplo.com.br" id="form"/>
       <Input
         label="Senha"
         placeholder="No minímo 6 caracteres"
         type="password"
+        id="form"
       />
-      <Button type="submit" content="Entrar" />
+      <Button type="submit" id='form' content="Entrar" />
 
       <CreateAccountLink />
     </Styles.Container>
+   </form>
   );
 };
 

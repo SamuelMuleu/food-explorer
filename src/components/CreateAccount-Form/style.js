@@ -2,7 +2,7 @@ import styled from "styled-components";
 import  DEVICE_BREAKPOINTS  from "../../styles/deviceBreakpoints";
 import { COLORS_THEME } from "../../styles/theme";
 
-const Container = styled.form`
+const Container = styled.div`
 
 display: flex;
   flex-direction: column;

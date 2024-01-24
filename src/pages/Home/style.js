@@ -9,6 +9,7 @@ height: 100vh;
 
 display: flex;
 flex-direction: column;
+width: 100vw;
 
 
 .div-carousel{

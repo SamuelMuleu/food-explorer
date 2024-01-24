@@ -10,11 +10,15 @@ const Container = styled.div`
      gap:15px;
      padding-bottom: 8px;
      padding-top: 8px;
+   font-size: 1.5rem;
+   font-weight:bold;
+
     >button{
         border: none;
         background-color: inherit;
         color: ${COLORS_THEME.LIGHT_100};
-    
+        
+       
     }
 
 

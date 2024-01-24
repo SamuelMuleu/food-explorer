@@ -18,6 +18,9 @@ padding: 20px;
   margin: 0;
 margin-left: 80px;
 gap: 200px;
+img{
+  display: none;
+}
 
 }
 

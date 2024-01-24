@@ -11,6 +11,7 @@ const Container = styled.div`
     color: ${COLORS_THEME.LIGHT_400};
     font-size: 16px;
     display: flex;
+
 align-items: center;
  
   }
@@ -21,7 +22,7 @@ align-items: center;
     width: 316px;
     border-radius: 8px;
     border: none;
-    background-color: ${COLORS_THEME.DARK_900};
+    background-color: ${COLORS_THEME.DARK_800};
 
   }
   ::placeholder{

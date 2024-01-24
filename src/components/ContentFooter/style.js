@@ -8,7 +8,7 @@ color: ${COLORS_THEME.LIGHT_100};
 
 display: flex;
 
-
+width: 100vw;
 gap: 10px;
 
 &> img{
@@ -27,13 +27,19 @@ color: ${COLORS_THEME.LIGHT_700};
 word-spacing: 0.1rem;
 padding-top: 20px;
 @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-    padding-top: 14px;
+width: 100px;
+display: block;
 }
 
 }
 &>p{
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
- margin-left :800px ;
+ margin-left :800px;
+ padding-top: 30px;
+ margin-right:20px;
+}
+@media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding-top: 16px;
 }
 }
 .copyright{

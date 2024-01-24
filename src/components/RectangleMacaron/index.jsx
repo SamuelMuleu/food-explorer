@@ -6,9 +6,8 @@ const RectangleMacaron = () => {
     <Container>
       <img src={img} alt="macaron colorful" />
       <div>
-
-      <h2>Sabores inigualáveis</h2>
-      <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
+        <h2>Sabores inigualáveis</h2>
+        <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
       </div>
     </Container>
   );

@@ -7,13 +7,13 @@ const Container = styled.header`
 
 display: flex ;
 justify-content: space-evenly;
-gap: 50px;
+
 background-color: ${COLORS_THEME.DARK_700};
-height: 10px;
-top: 0;
 align-items: center;
-width: 100vw;
-padding: 40px;
+width: 100%;
+height: 77px;
+padding: 15px;
+
 
 
 
@@ -50,10 +50,13 @@ input{
     width: 580px;
     height: 40px;
     border-radius: 0%;
+    color: ${COLORS_THEME.LIGHT_400};
+    
 }
 
 ::placeholder{
 text-align: center;
+
 
 
 }
@@ -82,19 +85,22 @@ const ReceiptButton = styled.div`
 
 
 border-radius: 6px;
-width:220px;
+width:230px;
+padding: 30px;
 
 
 
 svg{
     width: 23px;
     height: 22px;
+    
     vertical-align:top;
 
 }
 span{
 
     vertical-align:bottom;
+
 }
 
 @media (max-width:${DEVICE_BREAKPOINT.LG}) {

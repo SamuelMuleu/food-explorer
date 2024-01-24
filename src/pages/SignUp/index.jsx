@@ -1,7 +1,6 @@
 import Container from "./style";
-import  Title  from "../../components/Title";
+import Title from "../../components/Title";
 import CreateAccount from "../../components/CreateAccount-Form";
-
 
 const SignUp = () => {
   return (
@@ -9,7 +8,6 @@ const SignUp = () => {
       <Title />
 
       <CreateAccount />
-  
     </Container>
   );
 };

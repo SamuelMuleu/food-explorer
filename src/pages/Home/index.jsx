@@ -16,6 +16,7 @@ const Home = () => {
 
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
+  
   const handleOpenMenu = () => {
     setMenuIsOpen(true);
   };

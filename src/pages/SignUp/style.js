@@ -19,7 +19,9 @@ padding: 20px;
   display: flex;
   margin-left: 80px;
   gap: 200px;
-  
+  img{
+  display: none;
+}
 };
 
   

@@ -6,7 +6,7 @@ const Container = styled.div`
   color: ${COLORS_THEME.LIGHT_100};
   font-size: 35px;
   display: flex;
-  
+
 
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -14,7 +14,29 @@ const Container = styled.div`
     & >h1{
 
       width: 300px;
+      padding-left: 30%;
       align-items: center;
+    padding-bottom: 6%;
+    }
+
+  & > img {
+  position: absolute;
+  left: 6%;
+  top: 1.5%;
+    
+  }
+
+    &> p{
+    color: ${COLORS_THEME.CAKE_100};
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+    position: absolute;
+    left: 18.5%;
+    bottom: 92%;
+
+
+
     }
   }
 
@@ -41,10 +63,21 @@ width: 160px;
  margin-top: 32px;
   margin-right: -35px;
   margin-left: -10px;
+
 }
 &> img{
 
   margin-top: 26px;
+}
+&> p{
+  color: ${COLORS_THEME.CAKE_100};
+
+  font-size: 1.2rem;
+
+margin-top:40px;
+margin-left: 10px;
+padding-left: 17px;
+
 }
 
 
