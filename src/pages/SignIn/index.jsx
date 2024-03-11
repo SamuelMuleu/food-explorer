@@ -2,7 +2,7 @@ import Container from "./style";
 import Title from "../../components/Title";
 import LoginForm from "../../components/LoginForm";
 
-export function SigIn() {
+function SigIn() {
   return (
     <Container>
       <Title />
@@ -11,5 +11,4 @@ export function SigIn() {
     </Container>
   );
 }
-
 export default SigIn;

@@ -1,21 +1,22 @@
 import Container from "./style";
 
+const Ingredients = ({ data }) => {
+  if (!Array.isArray(data)) {
 
-const Ingredients = ({data}) => {
+    return <div>Erro: data não é um array</div>;
+  }
 
-
-  return(
-  
-  <Container>
-<ul className="ingredients-list">
-        {data.map((ingredient, index) => (
-          <li key={index} className="ingredient">
-            {ingredient}
+  return (
+    <Container>
+      <ul className="ingredients-list">
+        {data.map((ingredient) => (
+          <li key={ingredient.id} className="ingredient">
+            {ingredient.name}
           </li>
         ))}
       </ul>
-  </Container>
-  )
+    </Container>
+  );
 };
 
 export default Ingredients;

@@ -1,76 +1,63 @@
-import React, { Component } from "react";
 import * as Styles from "./style";
 import Input from "../Input";
 import Button from "../ButtonRed";
 import ReturnToPageLogin from "../../components/ReturnLogin-Link";
+import { useState } from "react";
+import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
-class CreateAccount extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state ={name:'', email: "", password: "" };
+const CreateAccount = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
 
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  const handleSubmit = () => {
+    if (!name || !email || !password) {
+      return alert("Preencha todos os campos!");
+    }
+    api
+      .post("/users", { name, email, password })
+      .then(() => {
+        alert("Usuario cadastrado com sucesso!");
+        navigate("/");
+      })
+      .catch((error) => {
+        if (error.response) {
+          alert(error.response.data.message);
+        } else {
+          alert("Não foi possivel cadastrar");
+        }
+      });
+  };
 
-  handleNameChange(event) {
-
-    this.setState({ name: event.target.value });
-   
-  }
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  handlePasswordChange(event) {
-    this.setState({ password: event.target.value });
-  }
-
-  handleSubmit(event) {
-   
-    const { name, email, password } = this.state;
-    console.log(`Um nome foi enviado: ${name}`);
-    console.log(`Um email foi enviado: ${email}`);
-    console.log(`Uma senha foi enviado: ${password}`);
-
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <Styles.Container>
-          <Input
-            type="text"
-            value={this.state.name}
-            onChange={this.handleNameChange}
-            label="Seu Nome"
-            placeholder="Exemplo: Samuel Pereira"
-          />
-          <Input
-            type="email"
-            value={this.state.email}
-            onChange={this.handleEmailChange}
-            label="Email"
-            placeholder="Exemplo: exemplo@exemplo.com.br"
-          />
-          <Input
-            type="password"
-            value={this.state.password}
-            onChange={this.handlePasswordChange}
-            label="Senha"
-            placeholder="No mínimo 6 caracteres"
-          />
-          <Button type='submit' content="Criar Conta" />
-          <ReturnToPageLogin />
-        </Styles.Container>
-      </form>
-    );
-  }
-}
+  return (
+    <form>
+      <Styles.Container>
+        <Input
+          type="text"
+          placeholder="Exemplo: Samuel Pereira"
+          onChange={(e) => setName(e.target.value)}
+          label="Seu Nome"
+        />
+        <Input
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          label="Email"
+          placeholder="Exemplo: exemplo@exemplo.com.br"
+        />
+        <Input
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          label="Senha"
+          placeholder="No mínimo 6 caracteres"
+        />
+        <Button onClick={handleSubmit} content="Criar Conta" />
+        <ReturnToPageLogin />
+      </Styles.Container>
+    </form>
+  );
+};
 
 export default CreateAccount;

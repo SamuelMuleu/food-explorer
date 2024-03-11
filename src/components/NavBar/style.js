@@ -10,7 +10,7 @@ justify-content: space-evenly;
 
 background-color: ${COLORS_THEME.DARK_700};
 align-items: center;
-width: 100%;
+width: 100vw;
 height: 77px;
 padding: 15px;
 

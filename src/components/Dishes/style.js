@@ -4,13 +4,13 @@ import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
 
-  position: relative;
 
-  text-align: center;
+
+
   padding: 10px;
   color: ${COLORS_THEME.LIGHT_100};
   width: 100vw;
-  min-height: 10vh;
+  max-height: 100vh;
   display: flex;
 
 
@@ -19,6 +19,7 @@ const Container = styled.div`
     width: 240px;
     height: 240px;
     margin: 10px;
+    display: flex;
   }
 
   h1 {
@@ -27,14 +28,26 @@ const Container = styled.div`
   }
 
   p {
+
     padding: 1px;
     font-size: 1.2rem;
+    width: 60%;
   }
-.teste{
+.editdish{
   padding:25px;
-  padding-top: 10px;
-}
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+top: 1%;
+  left:12%;
+  
 
+}
+.buttons{
+  position: relative;
+right: 20%;
+}
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
@@ -56,16 +69,16 @@ const Container = styled.div`
      font-weight: 400;
      position: absolute;
     right: 30%;
+    padding: 20px;
      bottom: 65%;
     }
     p{
-
-      position: absolute;
-      word-spacing: 3px;
-      top: 40%;
- padding-left:39.6%;
+ word-spacing: 3px;
  width: 1160px;
-     font-size: 2rem;
+font-size: 2rem;
+position: absolute;
+top: 40%;
+left: 40%;
    
     }
   }
@@ -74,7 +87,7 @@ const Container = styled.div`
   .buttons{
     
     position: absolute;
-    top: 60%;
+    top: 80%;
     right: 33%;
   }
   .zigAz{

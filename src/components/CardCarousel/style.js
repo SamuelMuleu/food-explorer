@@ -3,8 +3,11 @@ import { COLORS_THEME } from "../../styles/theme";
 import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
-
 display: flex;
+
+flex-direction: row-reverse;
+width:100%;
+height: 40vh;
 
 .pencilButton{
 
@@ -16,9 +19,7 @@ border: none;
    color: ${COLORS_THEME.LIGHT_100};
    border-radius: 50%;
    display: flex;
-   position: absolute;
-   top: 19%;
-   right: 27%;
+
 
 >svg{
 
@@ -26,17 +27,14 @@ border: none;
 }
 
 }
-@media (max-width:${DEVICE_BREAKPOINTS.MD}) {
-        
-    display: flex;
-justify-content: center;
-}
-@media (min-width:${DEVICE_BREAKPOINTS.LG}) {
-.pencilButton{
-position: relative;
 
-right: 0%;
-left: 90%;
+
+@media (min-width:${DEVICE_BREAKPOINTS.LG}) {
+   flex-direction: row;
+gap:50px;
+ justify-content: center;
+.pencilButton{
+
 
    background: none;
 
@@ -46,31 +44,33 @@ left: 90%;
 }
 }
 
-padding-top: 42px;
+padding-top: 2px;
+padding-bottom: 2px;
 color:${COLORS_THEME.LIGHT_100} ;
 align-items: center;
 
-position: relative;
+
 
 
 >div{
-border: 3px solid ${COLORS_THEME.DARK_300};
+border: 5px solid ${COLORS_THEME.DARK_300};
 background-color: ${COLORS_THEME.DARK_200};
 border-radius: 10px;
-padding: 20px;
+
 
 
 
 
 
 .heartButton{
-position: absolute;
+   display: flex;
+
+
    background: inherit;
    border: none;
    color: ${COLORS_THEME.LIGHT_100};
    border-radius: 50%;
- left: 15%;
- top: 19%;
+
 
 >svg{
 
@@ -84,6 +84,7 @@ position: absolute;
 height:88px;
 width: 88px;
 margin-left: 30px;
+border-radius: 50%;
 
 }
 >h1{

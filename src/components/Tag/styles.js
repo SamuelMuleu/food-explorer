@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
+import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
 
@@ -8,39 +9,85 @@ background: inherit;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-position: relative;
-svg{
-    position: absolute;
-    right:29%;
-   
-}
+width: 100%;
+
+
+
 input{
+
     padding: 2%;
 
 }
 input::placeholder{
  
     padding-left: 5px;
-    padding: 2%;
+
     color: ${COLORS_THEME.LIGHT_500};
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .ingredient{
-    border-radius:  8px;
- 
+ border-radius:  8px;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap ;
+margin: 8px;
+ svg{
+position: relative;
+  left: 45%;
+  bottom:1%;
+   
+}
   width: 70%;
+  height: 70%;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 
 
 }
 .ingredient-add{
-width: 70%;
+
+
     color: ${COLORS_THEME.LIGHT_500};
  background-color: inherit;
  border:  0.17rem dashed ${COLORS_THEME.LIGHT_500};
  border-radius: 5px;
+
+}
+
+.plus{
+
+position: absolute;
+margin-left: 18%;
+
+  
+
+
+
+}
+
+
+@media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+  
+
+  .ingredient{
+    border-radius:  8px;
+
+
+height: 20px;
+    background-color: ${COLORS_THEME.LIGHT_600};
+    border-radius: 5px;
+
+
+}
+.plus{
+  position: relative;
+left: -3%;
+top: 10%;
+
+
+
+}
 }
 
 

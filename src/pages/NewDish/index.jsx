@@ -6,14 +6,14 @@ import FormDish from "../../components/FormDish";
 import { useState } from "react";
 import Menu from "../../components/Menu";
 
-const NewDish = () => {
+export const NewDish = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
   const handleOpenMenu = () => {
     setMenuIsOpen(true);
   };
   const handleCloseMenu = () => {
-    setMenuIsOpen(close);
+    setMenuIsOpen(false);
   };
 
   return (
@@ -33,5 +33,3 @@ const NewDish = () => {
     </Container>
   );
 };
-
-export default NewDish;

@@ -1,30 +1,35 @@
-import Container from "./style";
+import { Container, ButtonAdmin } from "./style";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Menu from "../../components/Menu";
 
-import FormDish from "../../components/FormDish";
+import EditFormDish from "../../components/EditFormDish"
+import Button from "../../components/ButtonRed";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
+import { api } from "../../services/api";
 
-const EditDish = () => {
+export const EditDish = () => {
   const [MenuIsOpen, setMenuIsOpen] = useState(false);
+  const [locationInfo, setLocationInfo] = useState(null);
+  const [dishState, setDishState] = useState(null);
 
   const navigate = useNavigate();
 
   const location = useLocation();
-  const [locationInfo, setLocationInfo] = useState(null);
-  const { state } = location;
+  const dish = location.state && location.state.dish;
+  const selectedDish = dish || dishState;
+
 
   useEffect(() => {
-    if (!state) {
+    if (!selectedDish) {
     } else {
-      const data = state?.data || [];
+      const data = selectedDish.data || [];
       if (data.length > 0) {
         localStorage.setItem("locationInfo", JSON.stringify(data));
       }
     }
-  }, [state]);
+  }, [selectedDish]);
 
   useEffect(() => {
     const storedData = localStorage.getItem("locationInfo");
@@ -33,8 +38,7 @@ const EditDish = () => {
     }
   }, []);
 
-  const [id, image, title, description, value, ingredients] =
-    locationInfo || [];
+
 
   const handleOpenMenu = () => {
     setMenuIsOpen(true);
@@ -43,24 +47,50 @@ const EditDish = () => {
     setMenuIsOpen(false);
   };
 
+
+
+  async function handledeleteDish() {
+
+
+
+    try {
+      const response = await api.delete(`/dish/${selectedDish.id}`);
+
+      console.log(response.data)
+      alert("Prato Deletado")
+      navigate("/")
+
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+
+
+
   return (
     <Container>
       <NavBar onOpenMenu={handleOpenMenu} />
       <Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
-      <FormDish
-        key={id}
-        image={image}
+      <EditFormDish
+        image={selectedDish.imagem_path}
         title="Editar Prato"
+        setCategorias={selectedDish.categoria}
         placeholder="Selecione imagem para alterá-la"
-        inputPlaceholder={title}
-        prieceInput={value}
-        TextareaPlaceholder={description}
+        inputPlaceholder={selectedDish.name}
+        ingredients={selectedDish.ingredientes}
+        prieceInput={selectedDish.preco}
+        TextareaPlaceholder={selectedDish.descricao}
         Edit
       />
+      {
+        <ButtonAdmin onClick={handledeleteDish} className="buttonRemove"> Excluir Prato</ButtonAdmin>
+      }
+
+
+
 
       <Footer />
     </Container>
   );
 };
-
-export default EditDish;

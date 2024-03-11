@@ -49,6 +49,7 @@ label{
 
 }
 .inputs{
+
   padding-left: 12px;
   padding-bottom: 2px;
   padding-top: 10px;
@@ -62,6 +63,7 @@ label{
 
 
 input[type="file"] {
+
 display:none;
 
 }
@@ -82,6 +84,7 @@ font-weight: 500;
   gap: 10px;
   align-items: center;
   svg{
+  
     font-size: 2.5rem;
 
   }
@@ -94,6 +97,7 @@ font-weight: 500;
 }
 
 .Ingredients{
+  
   margin-top: 10px;
   margin-left: 3%;
   column-count: 3;  
@@ -138,7 +142,6 @@ max-width: 40vw;
 max-height: 100vh;
 
 input{
-
 font-weight: 500;
 font-size: 1.1rem;
 
@@ -167,7 +170,6 @@ label{
 .inputs{
 
 gap: 30px;
-
   display: flex;
   flex-direction: row;
 margin: 40px;
@@ -218,24 +220,20 @@ font-weight: 500;
 
 .Ingredients{
 
+display: flex;
+flex-direction: column;
+ column-count: 3;
 
-  column-count: 3;  
   color: ${COLORS_THEME.LIGHT_400};
   font-size: 1.3rem;
   
 
-  height: 48px;
+  min-height: 48px;
   min-width: 700px;
   margin-bottom : 23px;
   border-radius: 8px;
   background-color: ${COLORS_THEME.DARK_800};
-    svg{
-    position: absolute;
-  right: 32%;
-  bottom: 23%;
 
-  } 
-  
 }
 
 .description{
@@ -300,17 +298,7 @@ const Textarea = styled.textarea`
   width: 96%;
   height: 170px;
 `;
-const ButtonAdmin = styled.button`
-margin-left: 68%;
-border: none;
-color: ${COLORS_THEME.LIGHT_100};
-  border-radius: 4px; 
-width: 120px;
-height: 40px;
-background-color: ${COLORS_THEME.DARK_800};
-font-weight: 500;
-
-`;
 
 
-export { Container, BackPage, Title, Textarea, ButtonAdmin };
+
+export { Container, BackPage, Title, Textarea };

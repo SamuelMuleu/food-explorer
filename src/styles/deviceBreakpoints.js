@@ -1,4 +1,4 @@
- const DEVICE_BREAKPOINTS = {
+const DEVICE_BREAKPOINTS = {
 
 
     XS: "320px",

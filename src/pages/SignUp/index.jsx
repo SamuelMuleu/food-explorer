@@ -1,8 +1,9 @@
 import Container from "./style";
+
 import Title from "../../components/Title";
 import CreateAccount from "../../components/CreateAccount-Form";
 
-const SignUp = () => {
+export function SignUp() {
   return (
     <Container>
       <Title />
@@ -10,6 +11,4 @@ const SignUp = () => {
       <CreateAccount />
     </Container>
   );
-};
-
-export default SignUp;
+}

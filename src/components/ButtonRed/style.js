@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { COLORS_THEME } from "../../styles/theme";
 
 
-const Container = styled.button`
+const Container = styled.div`
 
 
 span {

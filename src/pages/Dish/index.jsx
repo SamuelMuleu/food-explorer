@@ -1,40 +1,26 @@
 import { Container } from "./style";
 import NavBar from "../../components/NavBar";
-import Menu  from "../../components/Menu";
+import Menu from "../../components/Menu";
 import Dishes from "../../components/Dishes";
-
 
 import { useState } from "react";
 
-const Dish= ()=>{
+export const Dish = () => {
+  const [MenuIsOpen, setMenuIsOpen] = useState(false);
 
-    const [MenuIsOpen, setMenuIsOpen] = useState(false);
-    
+  const handleOpenMenu = () => {
+    setMenuIsOpen(true);
+  };
+  const handleCloseMenu = () => {
+    setMenuIsOpen(false);
+  };
 
-    const handleOpenMenu = () => {
-      setMenuIsOpen(true);
-    };
-    const handleCloseMenu = () => {
-      setMenuIsOpen(false);
-    };
-
-
-return (
-
-
+  return (
     <Container>
-<NavBar onOpenMenu={handleOpenMenu}/>
-<Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
+      <NavBar onOpenMenu={handleOpenMenu} />
+      <Menu menuIsOpen={MenuIsOpen} onCloseMenu={handleCloseMenu} />
 
-<Dishes />
-
-
-
+      <Dishes />
     </Container>
-)
-
-
-
+  );
 };
-
-export default Dish;

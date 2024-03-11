@@ -17,7 +17,7 @@ display: none;
 min-height: 100vh;
 
 position:fixed ;
-z-index: 1;
+z-index: 3;
 left: 0;
 top: 0;
 overflow: auto;
@@ -53,11 +53,14 @@ min-height: 100vh;
 
 
 
+.svg-container.hidden {
+  display: none; 
+}
 
 
 
 `
-;
+    ;
 
 
 export default Container;

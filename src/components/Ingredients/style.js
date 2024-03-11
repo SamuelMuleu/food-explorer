@@ -5,18 +5,18 @@ import DEVICE_BREAKPOINTS from "../../styles/deviceBreakpoints";
 
 const Container = styled.div`
 
+display: grid;
 
+grid-template-columns:1fr 70%;
 
-display: flex;
-justify-content: center;
-
+width: 500px;
 padding: 20px;
 .ingredients-list{
     display:flex;
 
     flex-direction: row;
-    flex-wrap:wrap;
-    gap: 10px;
+
+gap: 20px;
     width: 240px;
     
 }
@@ -29,20 +29,22 @@ width: 30%;
 font-weight: 500;
 text-align: center;
 }
-@media (min-width: ${ DEVICE_BREAKPOINTS.LG}) {
+@media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 
 
 .ingredients-list{
-    
+
+    position: relative;
+    bottom: 700%;
+    left: 200%;
     flex-wrap: nowrap;
-    position: absolute;
-    top: 54%;
-    right: 39%;
+
     
 }
 .ingredient{
     min-height: 40px;
     min-width: 40%;
+    
 }
     
     

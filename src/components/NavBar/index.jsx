@@ -2,54 +2,66 @@ import { Container, ButtonStyle, ContainerInput, ReceiptButton } from "./style";
 import { List, Receipt, MagnifyingGlass } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { api } from "../../services/api";
+import CarouselComponent from "../CarouselComponent";
 import Title from "../Title";
 import Input from "../Input";
 import Button from "../ButtonRed";
 import ButtonSignout from "../ButtonSignout";
 
-const NavBar = ({ onOpenMenu }) => {
+const NavBar = ({ onOpenMenu, setSearchResults}) => {
   const navigate = useNavigate();
-  const [isAdmin, setIsAdmin] = useState(true);
+  const [search, setSearch] = useState("");
+
 
   const handleAddDish = () => {
     navigate("/newdish");
   };
 
+  const handleSubmitSearch = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.get("/dish", {
+        params: {
+          searchTerm: search,
+        },
+      });
+    setSearchResults(response.data);
+
+    } catch (error) {
+      console.error("Erro ao buscar pratos:", error);
+    }
+  };
+
   return (
-    <Container>
+    <Container >
       <ButtonStyle>
         <List onClick={onOpenMenu} style={{ marginLeft: "10px" }} />
       </ButtonStyle>
 
       <Title />
-
-      <ContainerInput>
-        <Input
-          svg={<MagnifyingGlass />}
-          placeholder="Busque por Pratos ou Ingredientes"
-        />
-      </ContainerInput>
-
-      {isAdmin && (
-        <ReceiptButton>
-          <Button
-            svg={<Receipt />}
-            onClick={handleAddDish}
-            content="Novo Prato"
+      <form onSubmit={handleSubmitSearch}>
+        <ContainerInput>
+          <Input
+            svg={<MagnifyingGlass />}
+            placeholder="Busque por Pratos ou Ingredientes"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
-        </ReceiptButton>
-      )}
+        </ContainerInput>
+      </form>
 
-      {!isAdmin && (
-        <ReceiptButton>
-          <Button svg={<Receipt />} content="pedidos(0)" />
-        </ReceiptButton>
-      )}
+      <ReceiptButton>
+        <Button
+          svg={<Receipt />}
+          onClick={handleAddDish}
+          content="Novo Prato"
+        />
+      </ReceiptButton>
 
       <ButtonSignout />
 
-      <ButtonStyle>{!isAdmin && <Receipt />}</ButtonStyle>
+
     </Container>
   );
 };

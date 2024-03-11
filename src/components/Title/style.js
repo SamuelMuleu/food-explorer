@@ -15,14 +15,14 @@ const Container = styled.div`
 
       width: 300px;
       padding-left: 30%;
+
       align-items: center;
-    padding-bottom: 6%;
     }
 
   & > img {
   position: absolute;
   left: 6%;
-  top: 1.5%;
+  top: 5%;
     
   }
 
@@ -32,8 +32,8 @@ const Container = styled.div`
     font-weight: 500;
     
     position: absolute;
-    left: 18.5%;
-    bottom: 92%;
+    left: 24%;
+    bottom: 91%;
 
 
 
