@@ -39,7 +39,6 @@ position: relative;
    
 }
   width: 70%;
-  height: 70%;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 
@@ -58,10 +57,10 @@ position: relative;
 .plus{
 
 position: absolute;
-margin-left: 18%;
+margin-left: 75%;
+margin-top: 2%;
 
   
-
 
 
 }
