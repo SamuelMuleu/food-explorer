@@ -7,7 +7,7 @@ const ButtonSignout = () => {
   const { signOut } = useAuth();
   return (
     <Container>
-      <Link onClick={signOut}>
+      <Link onClick={signOut} to={"/"}>
         <SignOut />
       </Link>
     </Container>

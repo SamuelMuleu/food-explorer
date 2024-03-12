@@ -1,11 +1,20 @@
 import Container from "./style";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 import { useAuth } from "../../hooks/auth";
 const Exit = () => {
-  const [isAdmin, setIsAdmin] = useState(true);
+
 
   const { signOut,user } = useAuth();
+
+
+
+  const handleSignOut = () => {
+    signOut();
+
+  };
+
+
   return (
     <Container>
       {user && user.role === "admin" && (
@@ -14,7 +23,7 @@ const Exit = () => {
         </Link>
       )}
 
-      <Link className="link" onClick={signOut}>
+      <Link className="link" onClick={handleSignOut} to={"/"}>
         Sair
       </Link>
     </Container>

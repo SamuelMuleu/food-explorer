@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useLocation, json } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { CaretLeft, Receipt } from "@phosphor-icons/react";
 import { Container, BackPage, ContentButton } from "./style";
 import Counter from "../Counter";
@@ -7,33 +7,17 @@ import Ingredients from "../Ingredients";
 import Button from "../ButtonRed";
 import { api } from "../../services/api";
 import Footer from "../Footer";
-
 import { useAuth } from "../../hooks/auth";
 
 const Dishes = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { user } = useAuth();
 
-  const [isAdmin, setIsAdmin] = useState(true);
   const [dishState, setDishState] = useState(null);
   const [ingredients, setIngredient] = useState([]);
   const dish = location.state && location.state.dish;
   const selectedDish = dish || dishState;
-
-const {user} = useAuth();
-
-  if (!selectedDish) {
-    return <div>Carregando...</div>;
-  }
-
-  const handleNavigateEdit = () => {
-    if (selectedDish) {
-      navigate(`/editdish/${selectedDish.id}`, { state: { dish: selectedDish } });
-    }
-  };
-
-  console.log({ ingredients })
-
 
   useEffect(() => {
     const stateDish = localStorage.getItem("@dish:state");
@@ -47,15 +31,12 @@ const {user} = useAuth();
       localStorage.setItem("@dish:state", JSON.stringify(dish));
     }
   }, [dish]);
-  { console.log(dish) }
-
 
   useEffect(() => {
     const fetchIngredients = async (dishId) => {
       try {
         const response = await api.get(`/dish/${dishId}`);
         setIngredient(response.data);
-
       } catch (error) {
         console.error("Erro ao buscar ingredientes:", error);
       }
@@ -66,7 +47,19 @@ const {user} = useAuth();
     }
   }, [selectedDish]);
 
+  if (!selectedDish) {
+    return (
+      <div>
+        <div>Carregando...</div>
+      </div>
+    );
+  }
 
+  const handleNavigateEdit = () => {
+    if (selectedDish) {
+      navigate(`/editdish/${selectedDish.id}`, { state: { dish: selectedDish } });
+    }
+  };
 
   return (
     <Container>
@@ -85,13 +78,10 @@ const {user} = useAuth();
         <div className="content">
           <h1>{selectedDish.name}</h1>
           <p>{selectedDish.descricao}</p>
-          <Ingredients
-
-            data={ingredients.ingredientes}
-          />
+          <Ingredients data={ingredients.ingredientes} />
         </div>
 
-        {user &&  user.role === "admin" && (
+        {user && user.role === "admin" && (
           <div className="editdish">
             <Button content="Editar Prato" onClick={handleNavigateEdit} />
           </div>
