@@ -53,7 +53,7 @@ const NavBar = ({ onOpenMenu, setSearchResults }) => {
       </form>
 
 
-      {user && user.role === "admin"(
+      {user && user.role === "admin" &&(
 
         <ReceiptButton>
           <Button
