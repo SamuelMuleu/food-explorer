@@ -6,7 +6,7 @@ const Container = styled.div`
 display: flex;
 
 flex-direction: row-reverse;
-width:100%;
+width:70%;
 height: 40vh;
 
 .pencilButton{
@@ -32,6 +32,7 @@ border: none;
 @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
    flex-direction: row;
 gap:50px;
+
  justify-content: center;
 .pencilButton{
 
@@ -57,7 +58,7 @@ border: 5px solid ${COLORS_THEME.DARK_300};
 background-color: ${COLORS_THEME.DARK_200};
 border-radius: 10px;
 
-
+height:190px;
 
 
 
