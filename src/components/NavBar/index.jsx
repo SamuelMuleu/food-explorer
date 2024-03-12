@@ -3,15 +3,16 @@ import { List, Receipt, MagnifyingGlass } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { api } from "../../services/api";
-import CarouselComponent from "../CarouselComponent";
 import Title from "../Title";
 import Input from "../Input";
 import Button from "../ButtonRed";
 import ButtonSignout from "../ButtonSignout";
+import { useAuth } from "../../hooks/auth";
 
-const NavBar = ({ onOpenMenu, setSearchResults}) => {
+const NavBar = ({ onOpenMenu, setSearchResults }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  const { user } = useAuth();
 
 
   const handleAddDish = () => {
@@ -26,7 +27,7 @@ const NavBar = ({ onOpenMenu, setSearchResults}) => {
           searchTerm: search,
         },
       });
-    setSearchResults(response.data);
+      setSearchResults(response.data);
 
     } catch (error) {
       console.error("Erro ao buscar pratos:", error);
@@ -51,13 +52,21 @@ const NavBar = ({ onOpenMenu, setSearchResults}) => {
         </ContainerInput>
       </form>
 
-      <ReceiptButton>
-        <Button
-          svg={<Receipt />}
-          onClick={handleAddDish}
-          content="Novo Prato"
-        />
-      </ReceiptButton>
+
+      {user && user.role === "admin"(
+
+        <ReceiptButton>
+          <Button
+            svg={<Receipt />}
+            onClick={handleAddDish}
+            content="Novo Prato"
+          />
+        </ReceiptButton>
+      )
+
+
+      }
+
 
       <ButtonSignout />
 
