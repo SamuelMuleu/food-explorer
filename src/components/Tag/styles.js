@@ -38,7 +38,7 @@ position: relative;
   bottom:1%;
    
 }
-  width: 70%;
+  width: 30%;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 

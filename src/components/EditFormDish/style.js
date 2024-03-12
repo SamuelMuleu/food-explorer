@@ -123,7 +123,7 @@ gap: 24px;
 
 }
 .button{
-margin-top: 10%;
+
 
 }
 

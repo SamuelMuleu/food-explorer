@@ -14,7 +14,7 @@ const Container = styled.div`
     & >h1{
 
       width: 300px;
-      padding-left: 30%;
+      padding-left: 20%;
 
       align-items: center;
     }
