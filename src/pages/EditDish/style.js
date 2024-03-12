@@ -15,13 +15,13 @@ margin-top: 9%;
 
    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 .buttonRemove{
-margin-top: 5.7%;
+
 
 }
     }
   .button {
     position: absolute;
-    top: 121.7%;
+    top: 131.7%;
     left: 2.9%;
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -64,7 +64,7 @@ margin-top: 5.7%;
 const ButtonAdmin = styled.button`
   margin-left: 62.8%;
   position: absolute;
-  top: 121.6%;
+  top: 131.6%;
   border: none;
   color: ${COLORS_THEME.LIGHT_100};
   border-radius: 4px;
