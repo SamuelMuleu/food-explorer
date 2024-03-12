@@ -75,7 +75,7 @@ const ButtonAdmin = styled.button`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     position: absolute;
-    top: 96.3%;
+    top: 99%;
     right: 84.5%;
   }
 `;
