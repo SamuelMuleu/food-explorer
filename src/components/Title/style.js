@@ -22,7 +22,7 @@ const Container = styled.div`
   & > img {
   position: absolute;
   left: 6%;
-  top: 5%;
+
     
   }
 

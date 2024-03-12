@@ -68,7 +68,11 @@ margin-top: 2%;
 
 @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
   
+  .ingredient-add{
 
+height: 20px;
+
+}
   .ingredient{
     border-radius:  8px;
 
@@ -83,6 +87,7 @@ height: 20px;
   position: relative;
 left: -3%;
 top: 10%;
+margin: 0;
 
 
 
