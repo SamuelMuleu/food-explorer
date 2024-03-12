@@ -7,7 +7,11 @@ const Container = styled.div`
   min-height: 100vh;
 
   max-width: 100vw;
+  .buttonRemove{
+    position: absolute;
+margin-top: 9%;
 
+}
 
    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
 .buttonRemove{

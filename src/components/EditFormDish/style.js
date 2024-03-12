@@ -123,7 +123,8 @@ gap: 24px;
 
 }
 .button{
-
+  position: absolute;
+  margin-top: 9%;
 
 }
 
