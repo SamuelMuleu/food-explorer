@@ -52,7 +52,7 @@ const CarouselComponent = ({ searchResults, dish }) => {
       }}
     >
 
-  {filteredDishes.length > 0 && filteredDishes.map((prato, index) => (
+  {filteredDishes.length > 0 && filteredDishes.map((prato) => (
               <SwiperSlide key={prato.id}>
                 <CardCarousel dish={prato} searchResults={searchResults} />
               </SwiperSlide>

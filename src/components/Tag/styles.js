@@ -31,14 +31,14 @@ input::placeholder{
 display: flex;
 flex-direction: row;
 flex-wrap:wrap ;
-margin: 8px;
+margin: 4px;
  svg{
 position: relative;
   left: 45%;
   bottom:1%;
    
 }
-  width: 30%;
+  width: 40%;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 
