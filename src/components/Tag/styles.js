@@ -38,7 +38,9 @@ position: relative;
   bottom:1%;
    
 }
-  width: 40%;
+  width: 50%;
+  margin: 10px;
+  height: 100%;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 
