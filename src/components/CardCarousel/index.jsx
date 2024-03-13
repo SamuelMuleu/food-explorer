@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 
-const CardCarousel = ({ dish, searchResults }) => {
+const CardCarousel = ({ dish }) => {
   const navigate = useNavigate();
   const [dishData, setDishData] = useState([]);
   const [isAdmin, setIsAdmin] = useState(true);
@@ -28,15 +28,6 @@ const {user} = useAuth();
     fetchDishes();
   }, []);
 
-  useEffect(() => {
-    if (searchResults && Object.keys(searchResults).length !== 0) {
-      // Se houver resultados da pesquisa, filtra os pratos com base no nome da pesquisa
-      const filteredData = dishData.filter((dish) => dish.name === searchResults.name);
-      setFilteredDishData(filteredData);
-    } else {
-      setFilteredDishData(dishData);
-    }
-  }, [searchResults, dishData]);
 
   const handleCardClick = (dish) => {
     navigate(`/dish/${dish.id}`, { state: { dish: dish } });

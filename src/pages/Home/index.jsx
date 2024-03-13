@@ -59,12 +59,11 @@ export const Home = () => {
         onSubmitSearch={handleSearchResults}
       />
 
-      <RectangleMacaron />
-
+      <RectangleMacaron /> 
       <CarouselComponent
         searchResults={searchResults}
         dish={dish}
-        category={categories}
+        categories={categories}
       />
 
       <Footer />
