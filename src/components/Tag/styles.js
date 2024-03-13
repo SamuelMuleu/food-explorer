@@ -40,7 +40,7 @@ position: relative;
 }
   width: 50%;
   margin: 10px;
-  height: 100%;
+  height: 20px;
     background-color: ${COLORS_THEME.LIGHT_600};
     border-radius: 5px;
 
